@@ -64,6 +64,8 @@ G --> C
 
 ---
 
+## Commands & Features
+
 While not all commands/features are finalized nor thought of, these are some of the basic commands that are planning to be used:
 
 **Format:** /[group] [list of subcommands] | Comments
