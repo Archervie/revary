@@ -98,6 +98,8 @@ While not all commands/features are finalized nor thought of, these are some of 
 
 This project serves as a technical portfolio for demonstrating software logistics awareness, alongside implementing critical networking concepts. It explores the boundaries of API interaction, managing state across distributed nodes, and securing unauthorized access points in a live environment.
 
+---
+
 ## Compliance & Deployment Note
 
 Proof of Concept: The Integration Layer (User-Context Engine) is designed strictly as a technical demonstration of traffic shaping, jittered execution, and residential proxy integration.
