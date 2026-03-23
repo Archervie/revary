@@ -97,3 +97,13 @@ While not all commands/features are finalized nor thought of, these are some of 
 ## Why this exists
 
 This project serves as a technical portfolio for demonstrating software logistics awareness, alongside implementing critical networking concepts. It explores the boundaries of API interaction, managing state across distributed nodes, and securing unauthorized access points in a live environment.
+
+---
+
+## Compliance & Deployment Note
+
+Proof of Concept: The Integration Layer (User-Context Engine) is designed strictly as a technical demonstration of traffic shaping, jittered execution, and residential proxy integration.
+
+ToS Adherence: To remain compliant with Discord’s Terms of Service, the Integration Layer is disabled by default in production environments. This project serves as a "White-Box" architectural study in networked automation rather than a live utility for user-account automation.
+
+Containerization: The entire ecosystem is orchestrated via Docker Compose. Each layer (Revu, GARY, and the Integration Engine) runs in an isolated container, ensuring that environment-specific dependencies (like proxy tunnels or crypto-libraries) do not bleed into the host system.
