@@ -23,10 +23,8 @@ async def main() -> None:
     dotenv_path: Union[str, os.PathLike[str]] = Path(".env")
     load_dotenv(dotenv_path=dotenv_path)
 
-    await asyncio.gather(
-        bot.start(os.environ["REVU_TOKEN"]),
-    )
-
+    async with asyncio.TaskGroup() as tg:
+        tg.create_task(bot.start(os.environ["REVU_TOKEN"]))
 
 # Runs everything
 asyncio.run(main())
