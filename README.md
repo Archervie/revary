@@ -1,6 +1,6 @@
 # Revary - Hybrid Distributed Bot Architecture
 
-Version: **0.0.5**
+Version: **0.0.6**
 
 Revary is a high-performance, asynchronous Discord system designed to demonstrate proficiency in concurrent process management, secure data persistence, and networked infrastructure. The project coordinates multiple service layers to provide custom advanced data archiving and automated utility services.
 
