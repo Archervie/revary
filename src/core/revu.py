@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
 
-from utils.log_utils import Logger
+from src.utils.log_utils import Logger
 
-cogs = ["misc"]
+cogs = ["misc", "user"]
 
 
 class Revu(commands.Bot):
@@ -14,7 +14,8 @@ class Revu(commands.Bot):
 
     async def setup_hook(self) -> None:
         for cog in cogs:
-            await self.load_extension(f"revu.cogs.{cog}")
+            self.logger.info(f"Loadeing... {cog}")
+            await self.load_extension(f"src.revu_cogs.{cog}")
             self.logger.info(f"Loaded {cog}")
         await self.tree.sync()
         self.logger.info("Finished setting up, now booting.")

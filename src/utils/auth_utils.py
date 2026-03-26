@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 # We add a salt to prevent from cracking the hashes
 load_dotenv()
-salt = os.environ["SALT"]
+salt = os.environ["SALT"] # Temporarily in .env
 
 
 class Authorization:

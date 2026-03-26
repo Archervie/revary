@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revary"
+version = "0.0.6"
+dependencies = [
+    "datetime",
+    "discord.py",
+    "discord.py[voice]",
+    "python-dotenv",
+    "argon2-cffi"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

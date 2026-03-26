@@ -2,13 +2,13 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from core import BaseGroupCog
-from utils import is_authorized
+from src.core import BaseGroupCog
+from src.utils import is_authorized
 
 
 @app_commands.allowed_installs(guilds=True, users=True)
 @app_commands.allowed_contexts(dms=True, guilds=True, private_channels=True)
-class ExampleCog(BaseGroupCog, name=""):
+class Cog(BaseGroupCog, name=""):
     """ """
 
     def __init__(self, bot: commands.Bot) -> None:
@@ -22,10 +22,8 @@ class ExampleCog(BaseGroupCog, name=""):
     async def example(self, interaction: discord.Interaction) -> None:
         """ """
         await interaction.response.send_message("", ephemeral=True)
-        assert interaction.command
-        self.logger.info(f"{interaction.command.name} ran by {interaction.user}.")
 
 
 # Adds the misc cog
 async def setup(bot: commands.Bot) -> None:
-    await bot.add_cog(ExampleCog(bot))
+    await bot.add_cog(Cog(bot))
